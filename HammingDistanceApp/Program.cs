@@ -12,17 +12,14 @@ namespace HammingDistanceApp
         {
             do
             {
-
-
                 string a;
                 string b;
                 int result;
                 Hamming.Hamming haming = new Hamming.Hamming();
-                Console.WriteLine("please write a string");
+                Console.WriteLine("Please write a string");
                 a = Console.ReadLine();
-                Console.WriteLine("please write another string");
+                Console.WriteLine("Please write another string");
                 b = Console.ReadLine();
-                Console.WriteLine("result hamming distance is:");
                 try
                 {
                     result = haming.HamingSpace(a, b);
@@ -34,7 +31,7 @@ namespace HammingDistanceApp
                     Console.WriteLine("Oops:{0}", ex.Message);
                 }
 
-
+                Console.WriteLine();
                 Console.WriteLine("If you do not continue please write 'exit' ");
             } while ("exit" != Console.ReadLine());
         }

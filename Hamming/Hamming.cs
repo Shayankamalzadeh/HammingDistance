@@ -17,14 +17,15 @@ namespace Hamming
     /// two sequences. It is named after the American mathematician
     /// Richard Hamming (1915-1998).
     /// 
-    /// 
+    /// for read more:
+    /// https://en.wikipedia.org/wiki/Hamming_distance
     /// </summary>
     public class Hamming
     {
         private int _count = 0;
         /// <summary>
-        ///Calculate Hamming Distance between two string parameters.
-        ///Two parameters must have same Lenght
+        ///Calculate Hamming distance between two string parameters.
+        ///Two parameters must have same lenght and have not empty or null.
         /// </summary>
         /// <param name="s1"> First parameter must be string</param>
         /// <param name="s2">Second parameter must be string</param>
@@ -34,11 +35,11 @@ namespace Hamming
 
             if (string.IsNullOrEmpty(s1) || string.IsNullOrEmpty(s2))
             {
-                throw new Exception("arguments are null or Empty");
+                throw new Exception("Arguments are null or Empty");
             }
             if (s1.Length != s2.Length)
             {
-                throw new Exception("arguments length are not same");
+                throw new Exception("Arguments length are not same");
             }
 
             for (int i = 0; i < s1.Length; i++)
